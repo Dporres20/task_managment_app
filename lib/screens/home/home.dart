@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/screens/home/widgets/go_premium.dart';
+import 'package:my_app/screens/home/widgets/tasks.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -21,6 +22,7 @@ class HomePage extends StatelessWidget {
                   fontWeight: FontWeight.bold),
             ),
           ),
+          Expanded(child: Tasks())
         ],
       ),
     );
