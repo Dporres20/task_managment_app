@@ -25,6 +25,33 @@ class HomePage extends StatelessWidget {
           Expanded(child: Tasks())
         ],
       ),
+      bottomNavigationBar: _bottomNavBar(),
+    );
+  }
+
+  Widget _bottomNavBar() {
+    return Container(
+      decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey.withOpacity(0.2),
+                spreadRadius: 5,
+                blurRadius: 10),
+          ]),
+      child: ClipRRect(
+        borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(30), topRight: Radius.circular(30)),
+        child: BottomNavigationBar(
+          items: const [
+            BottomNavigationBarItem(
+                label: 'Home', icon: Icon(Icons.home_rounded)),
+            BottomNavigationBarItem(
+                label: 'Settings', icon: Icon(Icons.settings))
+          ],
+        ),
+      ),
     );
   }
 
