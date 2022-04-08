@@ -26,6 +26,14 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: _bottomNavBar(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        elevation: 0,
+        backgroundColor: Colors.black,
+        onPressed: () {},
+        child: const Icon(Icons.add, size: 35),
+      ),
     );
   }
 
@@ -44,6 +52,11 @@ class HomePage extends StatelessWidget {
         borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30), topRight: Radius.circular(30)),
         child: BottomNavigationBar(
+          backgroundColor: Colors.white,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          selectedItemColor: Colors.blueAccent,
+          unselectedItemColor: Colors.grey.withOpacity(0.5),
           items: const [
             BottomNavigationBarItem(
                 label: 'Home', icon: Icon(Icons.home_rounded)),
