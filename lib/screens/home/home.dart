@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GoPremium(),
           Container(
             padding: const EdgeInsets.all(15),
             child: const Text(
